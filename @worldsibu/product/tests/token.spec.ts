@@ -6,8 +6,8 @@ import * as uuid from 'uuid/v4';
 import { MockControllerAdapter } from '@worldsibu/convector-adapter-mock';
 import 'mocha';
 
-import { Product } from '../product/src/product.model';
-import { ProductControllerClient } from '../product-client';
+import { Product } from '../src/product.model';
+import { ProductControllerClient } from '../client';
 
 describe('Product', () => {
   let productId: string;
