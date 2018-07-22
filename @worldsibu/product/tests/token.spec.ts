@@ -27,7 +27,7 @@ describe('Product', () => {
       {
         version: '*',
         controller: 'ProductController',
-        name: join(__dirname, '../product')
+        name: join(__dirname, '..')
       }
     ]);
   });

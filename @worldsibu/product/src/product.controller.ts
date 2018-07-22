@@ -10,14 +10,12 @@ import { Product } from './product.model';
 
 @Controller('product')
 export class ProductController extends ConvectorController {
-  private initialized = false;
-
   @Invokable()
   public async init(
     @Param(Product)
     product: Product
   ) {
-    if (this.initialized) {
+    if ((await Product.getOne(product.id)).id) {
       throw new Error('Product has already been initialized');
     }
 

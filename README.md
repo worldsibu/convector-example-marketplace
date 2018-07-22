@@ -8,6 +8,10 @@ If you're looking for a tutorial on how to set up your own project, **refer to t
 
 Run `npm i` to install all the neccesary dependencies.
 
+Run `npm run test` to run the unit tests.
+
 Run `npm run restart` to start a dev environment and install the chaincode in the blockchain.
 
-Run `npm run test` to run the unit tests.
+Run `npm run cc:invoke -- org1 -u user1 product init '{"id":"1","name":"Bananas","pictureUrl":"http://example.com/bananas.jpg","description":"Bananas","price":100}'` with the environment running to create a product and assign it to the Org1@user1
+
+Run `npm run cc:invoke -- org2 -u user2 product transfer 1 100` with the environment running to transfer the product to Org2@user2
